@@ -1,0 +1,172 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.ap{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#f0efe8;border-radius:12px;overflow:hidden;}
+.ap-nav{padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(240,239,232,0.07);background:rgba(10,10,15,0.9);}
+.ap-logo{font-family:'DM Serif Display',serif;font-size:18px;letter-spacing:-0.5px;}
+.ap-logo span{color:#c8f135;}
+.ap-cta-sm{background:#c8f135;color:#0a0a0f;border:none;padding:7px 16px;border-radius:100px;font-size:12px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.ap-hero{padding:48px 24px 32px;text-align:center;position:relative;overflow:hidden;}
+.ap-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(200,241,53,0.09) 0%,transparent 70%);pointer-events:none;}
+.ap-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(240,239,232,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(240,239,232,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;mask-image:radial-gradient(ellipse at center,black 10%,transparent 75%);}
+.ap-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(200,241,53,0.3);border-radius:100px;padding:4px 12px;font-size:11px;color:#c8f135;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:20px;}
+.ap-dot{width:5px;height:5px;border-radius:50%;background:#c8f135;animation:apulse 2s ease-in-out infinite;}
+.ap-h1{font-family:'DM Serif Display',serif;font-size:38px;line-height:1.0;letter-spacing:-1.5px;margin-bottom:14px;}
+.ap-h1 em{font-style:italic;color:#c8f135;}
+.ap-sub{font-size:14px;color:rgba(240,239,232,0.5);max-width:380px;margin:0 auto 28px;line-height:1.7;font-weight:300;}
+.ap-form{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:10px;}
+.ap-input{background:rgba(240,239,232,0.07);border:1px solid rgba(240,239,232,0.12);border-radius:100px;padding:10px 18px;font-size:13px;color:#f0efe8;width:220px;outline:none;font-family:'DM Sans',sans-serif;}
+.ap-input::placeholder{color:rgba(240,239,232,0.3);}
+.ap-btn{background:#c8f135;color:#0a0a0f;border:none;border-radius:100px;padding:10px 20px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.ap-note{font-size:11px;color:rgba(240,239,232,0.25);margin-bottom:32px;}
+
+.ap-mockup{background:#13131a;border:1px solid rgba(240,239,232,0.1);border-radius:12px;overflow:hidden;max-width:580px;margin:0 auto;}
+.ap-mbar{background:#1a1a24;padding:10px 16px;display:flex;align-items:center;gap:6px;border-bottom:1px solid rgba(240,239,232,0.06);}
+.ap-mdot{width:8px;height:8px;border-radius:50%;}
+.ap-murl{flex:1;display:flex;justify-content:center;}
+.ap-murlpill{background:rgba(240,239,232,0.06);border-radius:5px;padding:3px 16px;font-size:10px;color:rgba(240,239,232,0.25);}
+.ap-minner{padding:16px;display:grid;grid-template-columns:180px 1fr;gap:14px;min-height:260px;}
+.ap-msb{background:#0f0f16;border-radius:10px;padding:14px;}
+.ap-msblabel{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(240,239,232,0.3);margin-bottom:12px;}
+.ap-msbitem{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:6px;margin-bottom:4px;}
+.ap-msbitem.active{background:rgba(200,241,53,0.1);}
+.ap-msbname{font-size:11px;color:rgba(240,239,232,0.6);}
+.ap-msbitem.active .ap-msbname{color:#c8f135;}
+.ap-msbco{font-size:9px;color:rgba(240,239,232,0.25);margin-top:1px;}
+.ap-msbscore{font-size:10px;font-weight:500;padding:2px 6px;border-radius:100px;}
+.score-hi{background:rgba(200,241,53,0.15);color:#c8f135;}
+.score-lo{background:rgba(240,239,232,0.07);color:rgba(240,239,232,0.4);}
+.ap-mpanel{display:flex;flex-direction:column;gap:10px;}
+.ap-mjob{background:#0f0f16;border:1px solid rgba(240,239,232,0.06);border-radius:10px;padding:14px 16px;}
+.ap-mjob.feat{border-color:rgba(200,241,53,0.2);background:rgba(200,241,53,0.04);}
+.ap-mjtop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;}
+.ap-mjtitle{font-size:13px;font-weight:500;color:#f0efe8;}
+.ap-mjco{font-size:10px;color:rgba(240,239,232,0.35);margin-top:2px;}
+.ap-mjbadge{font-size:9px;padding:3px 8px;border-radius:100px;background:rgba(200,241,53,0.15);color:#c8f135;font-weight:500;}
+.ap-mjbadge.gr{background:rgba(240,239,232,0.07);color:rgba(240,239,232,0.4);}
+.ap-mjbar{background:rgba(240,239,232,0.06);border-radius:100px;height:2px;margin-top:8px;}
+.ap-mjfill{height:2px;border-radius:100px;background:#c8f135;}
+.ap-mjfill.mid{background:rgba(240,239,232,0.25);}
+.ap-mjmeta{font-size:9px;color:rgba(240,239,232,0.25);margin-top:6px;}
+
+.ap-steps{padding:40px 24px;display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.ap-step{background:#13131a;padding:24px;}
+.ap-step:nth-child(1){border-radius:10px 2px 2px 2px;}
+.ap-step:nth-child(2){border-radius:2px 10px 2px 2px;}
+.ap-step:nth-child(3){border-radius:2px 2px 2px 10px;}
+.ap-step:nth-child(4){border-radius:2px 2px 10px 2px;}
+.ap-sn{font-family:'DM Serif Display',serif;font-size:32px;color:rgba(240,239,232,0.07);line-height:1;margin-bottom:12px;}
+.ap-stitle{font-size:13px;font-weight:500;margin-bottom:8px;}
+.ap-sbody{font-size:12px;color:rgba(240,239,232,0.45);line-height:1.6;font-weight:300;}
+
+.ap-diff{padding:0 24px 40px;display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.ap-dc{padding:28px 24px;background:#13131a;border-radius:2px;}
+.ap-dc:first-child{border-radius:10px 2px 2px 10px;}
+.ap-dc:last-child{border-radius:2px 10px 10px 2px;background:rgba(200,241,53,0.04);border:1px solid rgba(200,241,53,0.1);}
+.ap-dtag{font-size:9px;letter-spacing:0.08em;text-transform:uppercase;padding:4px 10px;border-radius:100px;display:inline-block;margin-bottom:16px;}
+.ap-dtag.oth{background:rgba(240,239,232,0.06);color:rgba(240,239,232,0.35);}
+.ap-dtag.ap{background:rgba(200,241,53,0.15);color:#c8f135;}
+.ap-dh{font-family:'DM Serif Display',serif;font-size:20px;letter-spacing:-0.3px;margin-bottom:18px;line-height:1.2;}
+.ap-ditem{display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;}
+.ap-dicon{width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:9px;}
+.ap-dicon.x{background:rgba(240,239,232,0.06);color:rgba(240,239,232,0.3);}
+.ap-dicon.ch{background:rgba(200,241,53,0.15);color:#c8f135;}
+.ap-dtext{font-size:12px;color:rgba(240,239,232,0.45);line-height:1.5;font-weight:300;}
+.ap-dc:last-child .ap-dtext{color:rgba(240,239,232,0.65);}
+
+.ap-footer{border-top:1px solid rgba(240,239,232,0.06);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;}
+.ap-flogo{font-family:'DM Serif Display',serif;font-size:15px;}
+.ap-flogo span{color:#c8f135;}
+.ap-ftext{font-size:11px;color:rgba(240,239,232,0.2);}
+@keyframes apulse{0%,100%{opacity:1}50%{opacity:.3}}
+</style>
+
+<div class="ap">
+  <nav class="ap-nav">
+    <div class="ap-logo">appli<span>t</span></div>
+    <button class="ap-cta-sm">Join waitlist</button>
+  </nav>
+
+  <section class="ap-hero">
+    <div class="ap-hero-bg"></div>
+    <div class="ap-hero-grid"></div>
+    <div class="ap-pill"><div class="ap-dot"></div>Now in early access</div>
+    <h1 class="ap-h1">Apply smarter.<br><em>Not more.</em></h1>
+    <p class="ap-sub">Appplit matches your resume to the jobs you'll actually get — then polishes your application and applies for you.</p>
+    <div class="ap-form">
+      <input class="ap-input" type="email" placeholder="Enter your email">
+      <button class="ap-btn">Get early access</button>
+    </div>
+    <p class="ap-note">Free during beta · No credit card needed</p>
+
+    <div class="ap-mockup">
+      <div class="ap-mbar">
+        <div class="ap-mdot" style="background:#ff5f57"></div>
+        <div class="ap-mdot" style="background:#febc2e"></div>
+        <div class="ap-mdot" style="background:#28c840"></div>
+        <div class="ap-murl"><div class="ap-murlpill">appplit.com/dashboard</div></div>
+      </div>
+      <div class="ap-minner">
+        <div class="ap-msb">
+          <div class="ap-msblabel">Top matches</div>
+          <div class="ap-msbitem active"><div><div class="ap-msbname">Sr. Product Designer</div><div class="ap-msbco">Linear</div></div><div class="ap-msbscore score-hi">97%</div></div>
+          <div class="ap-msbitem"><div><div class="ap-msbname">Frontend Engineer</div><div class="ap-msbco">Vercel</div></div><div class="ap-msbscore score-hi">91%</div></div>
+          <div class="ap-msbitem"><div><div class="ap-msbname">UX Researcher</div><div class="ap-msbco">Notion</div></div><div class="ap-msbscore score-lo">84%</div></div>
+          <div class="ap-msbitem"><div><div class="ap-msbname">Design Engineer</div><div class="ap-msbco">Figma</div></div><div class="ap-msbscore score-lo">78%</div></div>
+        </div>
+        <div class="ap-mpanel">
+          <div class="ap-mjob feat">
+            <div class="ap-mjtop"><div><div class="ap-mjtitle">Sr. Product Designer</div><div class="ap-mjco">Linear · Remote</div></div><div class="ap-mjbadge">Top match</div></div>
+            <div class="ap-mjbar"><div class="ap-mjfill" style="width:97%"></div></div>
+            <div class="ap-mjmeta">97% match · Resume tailored · Ready to apply</div>
+          </div>
+          <div class="ap-mjob">
+            <div class="ap-mjtop"><div><div class="ap-mjtitle">Frontend Engineer</div><div class="ap-mjco">Vercel · San Francisco</div></div><div class="ap-mjbadge gr">Strong fit</div></div>
+            <div class="ap-mjbar"><div class="ap-mjfill mid" style="width:91%"></div></div>
+            <div class="ap-mjmeta">91% match · 2 skills to highlight</div>
+          </div>
+          <div class="ap-mjob">
+            <div class="ap-mjtop"><div><div class="ap-mjtitle">UX Researcher</div><div class="ap-mjco">Notion · New York</div></div><div class="ap-mjbadge gr">Good fit</div></div>
+            <div class="ap-mjbar"><div class="ap-mjfill mid" style="width:84%"></div></div>
+            <div class="ap-mjmeta">84% match · Resume needs polish</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px;">
+    <div style="background:#13131a;padding:24px;border-radius:10px 2px 2px 2px;"><div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(200,241,53,.6);margin-bottom:12px;">How it works</div><div style="font-family:'DM Serif Display',serif;font-size:22px;letter-spacing:-.5px;margin-bottom:8px;line-height:1.1;">Four steps to<br>your next job</div><div style="font-size:12px;color:rgba(240,239,232,.4);font-weight:300;line-height:1.6;">No more spray and pray. Every application is deliberate, tailored, and strong.</div></div>
+    <div style="background:#13131a;padding:24px;border-radius:2px 10px 2px 2px;display:flex;flex-direction:column;justify-content:center;gap:10px;">
+      <div style="font-size:11px;color:rgba(240,239,232,.5);display:flex;gap:8px;align-items:center;"><span style="width:18px;height:18px;border-radius:50%;background:rgba(200,241,53,.15);color:#c8f135;font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:500;flex-shrink:0;">1</span>Upload your resume</div>
+      <div style="font-size:11px;color:rgba(240,239,232,.5);display:flex;gap:8px;align-items:center;"><span style="width:18px;height:18px;border-radius:50%;background:rgba(200,241,53,.15);color:#c8f135;font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:500;flex-shrink:0;">2</span>See your top matches</div>
+      <div style="font-size:11px;color:rgba(240,239,232,.5);display:flex;gap:8px;align-items:center;"><span style="width:18px;height:18px;border-radius:50%;background:rgba(200,241,53,.15);color:#c8f135;font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:500;flex-shrink:0;">3</span>Polish for each role</div>
+      <div style="font-size:11px;color:rgba(240,239,232,.5);display:flex;gap:8px;align-items:center;"><span style="width:18px;height:18px;border-radius:50%;background:rgba(200,241,53,.15);color:#c8f135;font-size:9px;display:flex;align-items:center;justify-content:center;font-weight:500;flex-shrink:0;">4</span>Apply with confidence</div>
+    </div>
+  </div>
+
+  <div class="ap-diff">
+    <div class="ap-dc">
+      <div class="ap-dtag oth">Others</div>
+      <div class="ap-dh" style="color:rgba(240,239,232,.5)">Blast and hope</div>
+      <div class="ap-ditem"><div class="ap-dicon x">✕</div><div class="ap-dtext">Applies to hundreds of jobs automatically</div></div>
+      <div class="ap-ditem"><div class="ap-dicon x">✕</div><div class="ap-dtext">Same generic resume for every role</div></div>
+      <div class="ap-ditem"><div class="ap-dicon x">✕</div><div class="ap-dtext">No explanation of why you're a fit</div></div>
+      <div class="ap-ditem"><div class="ap-dicon x">✕</div><div class="ap-dtext">You find out you were rejected weeks later</div></div>
+    </div>
+    <div class="ap-dc">
+      <div class="ap-dtag ap">Appplit</div>
+      <div class="ap-dh">Precision over volume</div>
+      <div class="ap-ditem"><div class="ap-dicon ch">✓</div><div class="ap-dtext">Only roles where you'll genuinely stand out</div></div>
+      <div class="ap-ditem"><div class="ap-dicon ch">✓</div><div class="ap-dtext">Resume tailored to every job description</div></div>
+      <div class="ap-ditem"><div class="ap-dicon ch">✓</div><div class="ap-dtext">Explains exactly why you're a match</div></div>
+      <div class="ap-ditem"><div class="ap-dicon ch">✓</div><div class="ap-dtext">Tracks every application with status updates</div></div>
+    </div>
+  </div>
+
+  <footer class="ap-footer">
+    <div class="ap-flogo">appli<span>t</span></div>
+    <div class="ap-ftext">© 2025 Appplit · Built with purpose</div>
+  </footer>
+</div>
